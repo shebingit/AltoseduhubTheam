@@ -1,0 +1,389 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        
+        <!--=============== FONTS AND ICONS  ===============-->
+        <link href="https://fonts.googleapis.com/css2?family=Comme:wght@300&family=Open+Sans&family=Poppins:wght@300&family=Quicksand:wght@300&family=Roboto+Condensed:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+        <!--================ AOS ======================-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!--=============== PARALAX ==================-->
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+        <title>Altos Themes</title>
+    </head>
+
+    <body class="show-chatbot">
+
+        <!--=============== CHAT BOT ===============-->
+        <button class="chatbot-toggler">
+            <span><i class="ri-chat-1-fill"></i></span>
+            <span><i class="ri-close-circle-fill"></i></span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Chatbot</h2>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span><i class="ri-discord-fill"></i></span>
+                    <p> Hi there 👋 <br> How can I help you today?</p>
+                </li>
+                <li class="chat outgoing">
+                    <p>Lorem Ipsum is simply dummy text 
+                        
+                    </p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea name="" id="" placeholder="Enter a message..." required></textarea>
+                <span id="send-btn" class=""><i class="ri-send-plane-2-fill"></i></span>
+            </div>
+        </div>
+
+       
+        <!--=============== HEADER ===============-->
+        <header class="header">
+            <nav class="nav container">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="{% static 'img/favicon.ico' %}" class="logo__img" alt="logo"></i> ALTOS Theme Hub
+                    </a>
+                    <div class="nav__toggle">
+                        <i class="ri-shopping-bag-2-fill nav__toggle-menu"></i>
+                       
+                    </div>
+                   
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+
+                <!--=============== NAV MENU ===============-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="{% url 'HomePage' %}" class="nav__link">Altos</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ProductPage' %}" class="nav__link">Produts</a>
+                        </li>
+
+                        <!--=============== DROPDOWN 1 ===============-->
+                        <li class="dropdown__item">                      
+                            <div class="nav__link dropdown__button">
+                                Categeory <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-flashlight-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Most viewed courses</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="{% url 'ProductPage' %}" class="dropdown__link">HTML for beginners</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Advanced CSS</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">JavaScript OOP</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-heart-3-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Popular courses</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Development with Flutter</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web development with React</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Backend development expert</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-book-mark-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Careers</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web development</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Applications development</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">UI/UX design</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Informatic security</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-file-paper-2-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Certifications</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Course certificates</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free certifications</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--=============== DROPDOWN 2 ===============-->
+                        <!-- <li class="dropdown__item">
+                            <div class="nav__link dropdown__button">
+                                Categeory <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-code-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Web templates</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free templates</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Premium templates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-pen-nib-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Designs</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web designs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">App designs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Component design</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-apps-2-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Others</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Recent blogs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Tutorial videos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Webinar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+
+                        <li>
+                            <a href="#" class="nav__link">Plan & Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav__link">
+                              
+                                <i class="ri-shopping-cart-fill"></i>
+                            </a>
+
+                        </li>
+                       
+                        
+                    </ul>
+                    
+                </div>
+                
+
+            </nav>
+        </header>
+
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            
+            {% block content %}
+
+            {% endblock %}
+
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">ALTOS EDUHUB</h3>
+
+                    <ul class="footer__list">
+                        <li> 1st Floor - Thapasya Building Infopark</li>
+                        <li>Kakkanad, Cochin</li>
+                        <li> +91 974 663 2202</li>
+                        <li> info@Altostechnologies.in</li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">Quick Link</h3>
+
+                    <ul class="footer__links">
+                    
+                        <li>
+                            <a href="#" class="footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">FAQs & Help</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/people/ALTOS-Technologies/100084886970426/" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                        <a href="https://wa.me/919074156818" target="_blank" class="footer__social-link">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    
+                        <a href="https://www.youtube.com/@altostechnologies" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/mwlite/company/altos-technologies-kochi" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/altos_technologies/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </ul>
+                    <div class="subscribe">
+                        <h3 class="subscrib__title">Subscribe To Our NewsLetter</h3>
+                        <form action="#" method="post" class="subscribe__form">
+                            {% csrf_token %}
+                            <input type="email" class="scbscribe__input" name="#" placeholder="Enter your email" >
+                            <button type="submit" class="scbscribe__button">SIGNUP</button>
+                        </form>
+                    
+                    </div>
+
+                </div>
+            </div>
+
+            <span class="footer__copy">{% now "Y" %} &#169; AltosTechnologies. All rigths reserved</span>
+        </footer>
+
+ <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        
+        </a>
+        <a href="https://wa.me/919074156818" class="scrollwh" id="scroll-wh"> 
+        
+            <i class="ri-whatsapp-fill scrollwh__icon"></i>
+        </a>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'js/main.js' %}"></script>
+
+        <!--================== AOS JS ===================-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- ============ PARALAX =============-->
+        <script>
+            var image = document.getElementsByClassName('thumbnail');
+            new simpleParallax(image, {
+                delay: .6,
+                transition: 'cubic-bezier(0,0,0,0.8)',
+                scale:1
+            });
+
+        </script>
+
+    </body>
+</html>

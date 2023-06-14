@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ <!-- =================== CATEGEORY =======================-->
+
+               <section class="category_section section">
+                <div class="categeory_container container-fluid grid">
+                    <div class="category__content"  >
+                        <h2> CATEGEORY</h2>
+                        <p>Lorem Ipsum is simply dummy text of 
+                            the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's 
+                            standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of 
+                            type and scrambled it to make 
+                        </p>
+                        <div class="category__btnBox">
+                            <a href="#"><button class="buttons category__btn">View All</button></a>
+                        </div>
+                    </div>
+                    <div class="category__items__box" >
+                        <div class="category__item card">
+                            <img src="{% static 'img/temp_1.webp' %}">
+                        </div>
+                        <div class="category__item card">
+                            <img src="{% static 'img/temp_2.jpg' %}">
+                        </div>
+                        <div class="category__item card">
+                            <img src="{% static 'img/temp_3.jpg' %}">
+                        </div>
+                        <div class="category__item card">
+                            <img src="{% static 'img/temp_4.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+              </section> 
+
+{% endblock %}
