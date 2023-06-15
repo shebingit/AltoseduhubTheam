@@ -76,11 +76,11 @@ addEventListener('resize', removeStyle)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
+	// const scrollUp = document.getElementById('scroll-up')
     const scrollWh = document.getElementById('scroll-wh')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
+	// this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+	// 					: scrollUp.classList.remove('show-scroll')
     this.scrollY >= 350 ? scrollWh.classList.add('show-scroll')
 						: scrollWh.classList.remove('show-scroll')
 }

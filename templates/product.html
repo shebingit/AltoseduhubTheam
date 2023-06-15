@@ -3,9 +3,242 @@
 {% block content %}
 
 
+ <!--==================== Product Service TOP SECTION ====================-->
+
+ <section class="Product__section" id="Top_Section" >
+
+    <div class="home__container container-fluid grid" >
+        <div class="home__data" data-aos="fade-up"  data-aos-duration="2000" >
+            <h1 class="home__title">Welcome To <br> Altos Theme Hub    <br>We Provide The Best Tool For your Website </h1>
+            <p class="home__description1 ">
+                <span> Discover thousands of easy to customize themes, templates & CMS products,<br> made by world-class developers.</span> 
+                
+            </p>
+        </div>
+        <div class="home_image_bg">
+            <img src="{% static 'img/home_side_img.webp' %}" class="home__img thumbnail" alt="">   
+        </div>
+       
+
+    </div>
+   
+
+  </section>
+
+
+<!--==================== PRODUCT AND SERVICE SECTION ====================-->
+
+<section class="product__service_section section">
+    <div class="product__service_container container-fluid grid">
+        <div class="product__service__content" >
+           
+                <h2> Our Product & Services </h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing 
+                    and typesetting industry. Lorem Ipsum has been the 
+                    industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and 
+                    scrambled it to make a type specimen book. 
+                </p>
+           
+            
+            <div class="outerBox">
+                <div class="innerBox">
+                    <img src="{% static 'img/product_service.png' %}" alt="#">
+                </div>
+            </div>
+        </div>
+        <div class="product__service__Box grid">
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b1.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+           
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b3.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b2.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b3.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b1.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="ps__box">
+                    <div class="imgbox">
+                        <img src="{% static 'img/b1.png' %}" alt="#">
+                    </div>
+                    <div class="ps__content">
+                        <h4>Heading</h4>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing 
+                            and typesetting industry. Lorem Ipsum has been the 
+                            industry's standard dummy..... 
+                        </p>
+                        <div class="next__btn">
+                            <span>
+                                <i class="ri-arrow-right-circle-fill"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+        
+    </div>
+   
+</section>
+
+
+<!--=====================NEWS LETTER SECTION ==========================-->
+    
+<section class="newsletter__section section" >
+    <div class="newsletter__container container flex">
+        <div class="newsletter__top ">
+            <h1>Connect Us By a Single Click !</h1>
+        </div>
+        <div class="newsletter__formBox">
+            <form action="#" method="post">
+                {% csrf_token %}
+
+                <div class="form__inputbox">
+                   
+                    <input type="email" placeholder="Enter a valid email id" required>
+                    <button type="submit">SEND US</button>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--===================== PRODUCT SERVICE CONTENT SECTION ==========================-->
+<section class="PScontent__section section" >
+    <div class="PScontent__container container ">
+       
+        <div class="pscontent__box flex">
+            <div class="psimgBox"></div>
+            <div class="pscontent">
+                <div class="PScontent__top ">
+                    <h1>More About Product And Service  !</h1>
+                </div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book. It has survived not only five centuries, but also the leap 
+                    into electronic typesetting, remaining essentially unchanged. It was popularised 
+                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                    and more recently with desktop publishing software like Aldus PageMaker including 
+                    versions of Lorem Ipsum.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+  
+</style>
+
+
+
+
+
  <!-- =================== CATEGEORY =======================-->
 
-               <section class="category_section section">
+               <!-- <section class="category_section section">
                 <div class="categeory_container container-fluid grid">
                     <div class="category__content"  >
                         <h2> CATEGEORY</h2>
@@ -35,6 +268,6 @@
                         </div>
                     </div>
                 </div>
-              </section> 
+              </section>  -->
 
 {% endblock %}
