@@ -55,7 +55,7 @@
        
         <!--=============== HEADER ===============-->
         <header class="header">
-            <nav class="nav container">
+            <nav class="nav container-fluid">
                 <div class="nav__data">
                     <a href="#" class="nav__logo">
                         <img src="{% static 'img/favicon.ico' %}" class="logo__img" alt="logo"></i> ALTOS Theme Hub
@@ -241,13 +241,13 @@
                         </li> -->
 
                         <li>
-                            <a href="#" class="nav__link">Plan & Pricing</a>
+                            <a href="{% url 'PricingPage' %}" class="nav__link">Plan & Pricing</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">About</a>
+                            <a href="{% url 'AboutPage' %}" class="nav__link">About</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">Contact</a>
+                            <a href="{% url 'ContactPage' %}" class="nav__link">Contact</a>
                         </li>
                         <li>
                             <a href="#" class="nav__link">

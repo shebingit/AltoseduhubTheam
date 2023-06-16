@@ -8,6 +8,9 @@ urlpatterns = [
 
     path('',views.HomePage,name='HomePage'),
     path('Products',views.ProductPage,name='ProductPage'),
+    path('Pricing',views.PricingPage,name='PricingPage'),
+    path('About',views.AboutPage,name='AboutPage'),
+    path('Contact',views.ContactPage,name='ContactPage'),
     
     ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
