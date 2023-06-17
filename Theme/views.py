@@ -5,7 +5,10 @@ def HomePage(request):
 
 
 def ProductPage(request):
-    return render(request,'product.html')
+    return render(request,'product.html') 
+
+def categoryPage(request):
+    return render(request,'category.html')
 
 def PricingPage(request):
     return render(request,'pricing.html')

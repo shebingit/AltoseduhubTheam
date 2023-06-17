@@ -3,8 +3,64 @@
 {% block content %}
 
 
- <!--====================  SECTION ====================-->
+<!--====================CONTACT  SECTION ====================-->
 
+<section class="contact_section section" >
+    <div class="contact__container container grid ">
+        <div class="contact__leftBox ">
+            <h2>Contact Us</h2>
+            <p> Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown 
+                printer took a galley of type and scrambled it to make a 
+                type specimen book. It has survived not only five centuries, 
+                but also the leap into electronic typesetting,
+            </p>
+        </div>
+        <div class="contact__rightBox ">
+            <form action="#" method="post" class="contact_form">
+                {% csrf_token %}
+                <div class="inputBox flex">
+                    <label><i class="ri-user-fill"></i> </label>
+                    <input type="text" name="#" placeholder="Enter your name">
+                </div>
+                <div class="inputBox flex">
+                    <label><i class="ri-mail-fill"></i> </label>
+                    <input type="email" name="#" placeholder="Enter your email">
+                </div>
+                <div class="inputBox flex">
+                    <label> <i class="ri-phone-fill"></i></label>
+                    <input type="tel"  name="#" placeholder="Enter your phone number">
+                </div>
+                <div class="inputBox flex">
+                    <label><i class="ri-chat-4-fill"></i> </label>
+                    <textarea  name="#" placeholder="Enter your phone number"></textarea>
+                </div>
+                <div class="submitBox">
+                    <button type="submit">SEND <span><i class="ri-send-plane-2-fill"></i></span> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="contact__addressBox container flex ">
+        <div class="address_item">
+            <span><i class="ri-map-pin-fill"></i></span>
+            <p>1st Floor - Thapasya Building Infopark
+                Kakkanad, Cochin </p>
+        </div>
+        <div class="address_item">
+            <span><i class="ri-phone-fill"></i></span>
+            <p>+91 974 663 2202 </p>
+        </div>
+        <div class="address_item">
+            <span><i class="ri-mail-fill"></i></span>
+            <p>  info@Altostechnologies.in </p>
+        </div>
+    </div>
+    <div class="mapBox container-fluid">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.296201890831!2d76.3606986!3d10.0107422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d9bfaa6db61%3A0xa5df6acfc2d1e5fd!2sALTOS%20Technologies!5e0!3m2!1sen!2sin!4v1686981830455!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
 
 
 

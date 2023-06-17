@@ -55,7 +55,7 @@
        
         <!--=============== HEADER ===============-->
         <header class="header">
-            <nav class="nav container-fluid">
+            <nav class="nav container">
                 <div class="nav__data">
                     <a href="#" class="nav__logo">
                         <img src="{% static 'img/favicon.ico' %}" class="logo__img" alt="logo"></i> ALTOS Theme Hub
@@ -98,7 +98,7 @@
     
                                         <ul class="dropdown__list">
                                             <li>
-                                                <a href="{% url 'ProductPage' %}" class="dropdown__link">HTML for beginners</a>
+                                                <a href="{% url 'categoryPage' %}" class="dropdown__link">HTML for beginners</a>
                                             </li>
                                             <li>
                                                 <a href="#" class="dropdown__link">Advanced CSS</a>
@@ -368,8 +368,11 @@
         <!--=============== MAIN JS ===============-->
         <script src="{% static 'js/main.js' %}"></script>
 
-         <!--=============== CHAT JS ===============-->
+        <!--=============== CHAT JS ===============-->
          <script src="{% static 'js/chat.js' %}"></script>
+
+        <!--=============== CHAT JS ===============-->
+        <script src="{% static 'js/slider.js' %}"></script>
 
         <!--================== AOS JS ===================-->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
