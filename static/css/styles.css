@@ -1559,6 +1559,7 @@ box-shadow:  -27px 27px 53px #cecece,
   font-weight: 600;
   letter-spacing: 0.06rem;
   font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 2rem;
 }
 
  /* start: Slider */
@@ -1635,6 +1636,8 @@ box-shadow:  -27px 27px 53px #cecece,
   text-decoration: none;
   color: #222;
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.05rem;
 }
 .card-title:hover {
   color: #0f1317;
@@ -1656,6 +1659,123 @@ box-shadow:  -27px 27px 53px #cecece,
   }
 }
 
+
+/*=============== CATEGORY TEMPLATE SECTION ===============*/
+    .category_Tempsection
+    {
+        background-color: #663dff;
+        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+        
+    }
+    .category_Tempsection .wrapper{
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .section-header{
+        text-transform: uppercase;
+        line-height:1.6rem;
+        padding-bottom: 0.80rem;
+        font-size:1.7rem;
+        color: #fefcfc;
+        letter-spacing:0.06rem;
+        margin-bottom: 1rem;
+        
+    }
+    .section-paragraph
+    {
+      color: #fefcfc;
+      letter-spacing:0.05rem;
+      font-size: 0.95rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .content {
+      padding: 10%;
+    }
+    .content h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #1e1c1c;
+    }
+    .content p {
+      line-height: 1.5;
+      font-size: 0.85rem;
+    }
+    .content .linkBox
+    {
+        padding: 1.5rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .content .linkBox a
+    {
+        font-size: 0.80rem;
+        background-color: rgb(6, 25, 61);
+        padding: 0.30rem 1.5rem;
+        color:#fbf7f7;
+        letter-spacing: 0.07rem;
+        font-weight: 500;
+    }
+    .content .linkBox a:hover{
+        background-color: rgb(5, 14, 31);
+        color:#fbfbfb;
+    }
+    .main-content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-main-content-gap: 25px;
+        grid-column-gap: 15px;
+    }
+    .main-content .box{
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 15px;
+        border-radius: 0px;
+        border-radius: 3px;
+        
+        height: 250px;
+        overflow: hidden;    
+    }
+    .main-content .box::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+    .main-content .box:hover:before{
+        top: 0;
+        right: calc(100% - 5px);
+        z-index: 10;
+    }
+    .main-content .box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-content .box .img-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255,255,255,0.9);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        transition: all 0.5s ease-in-out;	
+    }
+    .main-content .box:hover .img-text{
+        top: 0;
+        right: 0;
+    }
+    
 
 
 /*=============== NEWS LETTER SECTION ===============*/
