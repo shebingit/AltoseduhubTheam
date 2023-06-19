@@ -10,6 +10,9 @@ def ProductPage(request):
 def categoryPage(request):
     return render(request,'category.html')
 
+def TemplateView(request):
+    return render(request,'view_template.html')
+
 def PricingPage(request):
     return render(request,'pricing.html')
 

@@ -6,7 +6,7 @@
 
               <section class="Top_section" id="Top_Section" >
 
-                <div class="home__container container-fluid grid" >
+                <div class="home__container container-fluid grid " >
                     <div class="home__data" data-aos="fade-up"  data-aos-duration="2000" >
                         <h1 class="home__title">Discover, Customize, and <br> Transform Your Digital Dreams Into Stunning Reality  </h1>
                         <p class="home__description1 ">
@@ -16,7 +16,7 @@
                             
                         </p>
                     </div>
-                    <div class="home_image_bg">
+                    <div class="home_image_bg ">
                         <img src="{% static 'img/home_side_img.webp' %}" class="home__img thumbnail" alt="home_image">   
                     </div>
                    
@@ -27,8 +27,8 @@
               </section>
 
               <!-- =================== TEMPLATE LIST =======================-->
-              <section class="Templates_section section" >
-                <div class="template__container container-fluid grid">
+              <section class="Templates_section section " >
+                <div class="template__container container-fluid grid" >
                    
                     <div class="template__listBox">
                         <div class="template_leftBox">
@@ -196,7 +196,7 @@
                             type and scrambled it to make 
                         </p>
                         <div class="template__btnBox">
-                            <a href="#"><button class="buttons">GET  ALL TEMPLATES</button></a>
+                            <a href="{% url 'categoryPage' %}"><button class="buttons">GET  ALL TEMPLATES</button></a>
                             
                         </div>
                     </div>
@@ -308,7 +308,7 @@
                                 distribution of letters, as opposed to using 'Content here,
                             </p>
                             <div class="product__btnBox">
-                                <a href="#"><button>LOOK OUR PRODUCT</button></a>
+                                <a href="{% url 'ProductPage' %}"><button>LOOK OUR PRODUCT</button></a>
                             </div>
                         </div>
                         <div class="product__content">
@@ -405,7 +405,7 @@
                             <p>Choose from 10,000+ awesome, mobile-friendly website templates for every kind of websites and blocks</p>
                         </div>
                         <div class="pricing__button">
-                            <a href="#"><button>EXPLOR ALL TEMPLATE</button></a>
+                            <a href="{% url 'categoryPage' %}"><button>EXPLOR ALL TEMPLATE</button></a>
                         </div>
                         <div class="TemplateBox flex">
                             <div class="lefttemplate">

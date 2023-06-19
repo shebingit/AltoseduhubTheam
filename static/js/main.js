@@ -85,3 +85,42 @@ const scrollUp = () =>{
 						: scrollWh.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+
+
+// ************* Reduce the Height of Navbar ********
+
+var navbar = document.querySelector('.nav');
+var scrolled = false;
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 0 && !scrolled) {
+    navbar.classList.add('scrolled');
+    scrolled = true;
+  } else if (window.scrollY === 0 && scrolled) {
+    navbar.classList.remove('scrolled');
+    scrolled = false;
+  }
+});
+
+
+
+
+// *********Showing the Active Link ********88
+
+// Get the current URL path
+var currentPath = window.location.pathname;
+
+// Get all the navigation links
+var navLinks = document.querySelectorAll('.nav__menu li a');
+
+// Loop through the navigation links
+for (var i = 0; i < navLinks.length; i++) {
+  var linkPath = navLinks[i].getAttribute('href');
+
+  // Check if the link's href matches the current path
+  if (linkPath === currentPath) {
+    // Add the 'active' class to the link
+    navLinks[i].classList.add('active');
+  }
+}

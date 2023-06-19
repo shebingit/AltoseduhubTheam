@@ -12,6 +12,8 @@ urlpatterns = [
     path('Pricing',views.PricingPage,name='PricingPage'),
     path('About',views.AboutPage,name='AboutPage'),
     path('Contact',views.ContactPage,name='ContactPage'),
+
+    path('Templates',views.TemplateView,name='TemplateView'),
     
     ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)

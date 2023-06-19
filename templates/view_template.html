@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ================= TEMPLATE PAGE SECTION===============-->
+
+<section class="templateView_section section">
+    <div class="templateView__container container grid">
+        <div class="contentBox">
+            <h1>Design Of Future Technology Website Template</h1>
+            <p>
+                Create a professional free website template. Responsive, fully customizable with easy Drag-n-Drop Nicepage editor. 
+                Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images.
+            </p>
+            <span><p>Category :<a href="{% url 'HomePage' %}">Home</a>| Technology</p><i class="ri-file-search-line"><a href="#">Demo Preview</a></i> </span>
+            <div class="template__imgBox">
+                <img src="{% static 'img/website-template-preview-12295.webp' %}" alt="#">
+            </div>
+        </div>
+        <div class="rightBox">
+
+            <form action="#">
+                {% csrf_token%}
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--================ TEMPLATE LIST SECTION ================-->
+
+<section class="moreTemplate__section section">
+    <div class="moreTemplate__container container">
+        <h1>More from Technology Website Templates</h1>
+        <p class="top__paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        <div class="templateBox">
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button>Preview</button></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button>Preview</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_5.webp' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button>Preview</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button>Preview</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_6.jpg' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="{% url 'TemplateView' %}" class="action_link"><button>Preview</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template__card">
+                <div class="card_head template__list">
+                    <img src="{% static 'img/temp_7.webp' %}" alt="#"> 
+                </div>
+                <div class="card__content">
+                    <h4>Heading</h4>
+                    <p>Lorem Ipsum is simply dummy text of 
+                        the printing and typesetting industry. 
+                    </p>
+                    <div class="rating__box">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="card__bottom">
+                        <p>$25</p>
+                        <div class="action__box">
+                            <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
+                            <a href="#" class="action_link"><button>Preview</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}
