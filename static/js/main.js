@@ -124,3 +124,16 @@ for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].classList.add('active');
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var parallaxContainer = document.querySelector('.parallax');
+    
+    var moveBackground = function() {
+      var scrollTop = window.pageYOffset;
+      parallaxContainer.style.backgroundPositionY = -scrollTop * 0.5 + 'px';
+    };
+  
+    // Listen for scroll events
+    window.addEventListener('scroll', moveBackground);
+  });

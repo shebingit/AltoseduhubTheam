@@ -4,6 +4,7 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+  --deft:100px;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(220, 68%, 54%);
@@ -344,7 +345,7 @@ header h2 {
   width: 100%;
   box-shadow: 0 2px 8px hsla(221, 56%, 11%, 0.1);
   /* background-color: var(--nav-color); */
-  background-color: hsla(225, 15%, 5%, 0.80);
+  background-color: hsla(225, 15%, 5%, 0.50);
   z-index: var(--z-fixed);
 }
 
@@ -354,7 +355,8 @@ header h2 {
  
 }
 .scrolled {
-  height: 2rem; /* Decreased height of the navbar when scrolled */
+  height: 3rem; /* Decreased height of the navbar when scrolled */
+  transition: ease-in-out;
 }
 .nav__data {
   height: 100%;
@@ -637,35 +639,52 @@ header h2 {
 .Top_section
 {
   /* background-color:var(--body-color) ; */
-  background-image: linear-gradient(0deg, rgba(48, 79, 105, 0.516), rgba(48, 77, 102, 0.484)), url('../img/bg7.jpg'); 
-  background-position: 50% 50%;
+  background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.711), rgba(12, 20, 27, 0.585)), url('../img/4.jpeg');  
+  /* background-color: #1b2845;
+background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%); */
+
+
+  background-position: 40% 30%;
+  height: 100vh;
  
 }
 .home__container {
-  height: 80vh;
-  padding-top: 6rem;
-  grid-template-columns:1.9fr 1.8fr;
+
+  padding-top: 4rem;
+  /* grid-template-columns:2fr; */
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
   /* background-color: aliceblue; */
 
 }
 .home__data {
  padding: 0.40rem;
  padding-top: 1rem;
- text-align:start ;
+ text-align:center ;
 }
 .home__data h1{
-  font-size:2.7rem ;
+  font-size:3rem ;
   margin-bottom: var( --mb-0-75);
   color: rgb(255, 253, 253);
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+  font-family: 'Ivar Text', 'Georgia', serif;
+
 }
+
 .home__data p{
   font-size: var(--normal-font-size); 
   color: rgb(234, 236, 236);
+  line-height: 1.8rem;
+  letter-spacing: 0.09rem;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 1.5rem;
 }
-.home_image_bg
+/* .home_image_bg
 {
 
   display: flex;
@@ -683,12 +702,16 @@ header h2 {
 {
   width: 100%;
   height: 100%;
-}
+} */
 
 
 
 /* For medium devices */
 @media screen and (max-width: 575px) {
+  .Top_section
+  {
+    padding: 5rem 0rem;
+  }
  
   .home__container {
     grid-template-columns: repeat(1, 1fr);
@@ -705,7 +728,7 @@ header h2 {
   }
   .home__data h1 {
     
-   font-size: 1.5rem;
+   font-size: 1.8rem;
   }
  
 }
@@ -847,6 +870,8 @@ header h2 {
   /* background-color: aliceblue; */
   background-image:  url('../img/tempbg.webp'); 
   background-position: 80% 20%;
+  height: 130vh;
+  padding: 5rem 1rem;
  
 }
 .template__container
@@ -875,7 +900,7 @@ header h2 {
 .template_leftBox p{
   color: #f1f1f1;
   font-size: 0.99rem;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 .template__listBox::-webkit-scrollbar {
   width: 0.01em; /* Adjust the width as needed */
@@ -921,7 +946,8 @@ header h2 {
 .card__content p{
   margin-top: 0.55rem;
   margin-bottom: 0.40rem;
-  font-size: var(--smaller-font-size)
+  font-size: var(--smaller-font-size);
+  line-height: 1.5rem;
 }
 .rating__box
 {
@@ -964,15 +990,15 @@ header h2 {
   
   letter-spacing: 0.12rem;
   font-size:3rem ;
-  margin-bottom: var( --mb-0-75);
+  margin-bottom: 2rem;
   color: rgb(245, 245, 245);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
 }
 .template__content p{
-  font-size: 0.99rem; 
+  font-size: 0.95rem; 
   color: rgb(238, 248, 248);
-  line-height: 1.7rem;
+  line-height: 1.9rem;
 }
 .template__btnBox
 {
@@ -1008,6 +1034,11 @@ header h2 {
 }
 @media (max-width:575px)
 {
+  .Templates_section
+{
+
+  height: auto;
+}
   .template__listBox
 {
   display:grid;
@@ -1031,9 +1062,11 @@ header h2 {
 .benift__section
 {
   /* background-color: rgba(243, 243, 243, 0.6); */
-  background-image: linear-gradient(0deg, rgba(20, 36, 50, 0.722), rgba(24, 50, 73, 0.484)), url('../img/clientbg.jpg'); 
+  background-image: linear-gradient(0deg, rgba(25, 27, 29, 0.74), rgba(9, 16, 22, 0.434)), url('../img/3.jpeg'); 
   background-position: 50% 50%;
-  padding: 5rem 0.90rem;
+  padding: 8rem 1rem;
+  object-fit: cover;
+ 
 }
 .benifit__container
 {
@@ -1045,26 +1078,29 @@ header h2 {
 }
 .benift__top
 {
-  padding: 1rem 1.5rem;
+  padding: 3rem 1rem;
  
 }
 .benift__top__head
 {
   font-size: 3rem;
-  text-align: center;
+  text-align: start;
   margin-bottom: 1rem;
-  font-weight: 700;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-family: 'Ivar Text', 'Georgia', serif;
   color: #fbf9fd;
+  letter-spacing: 0.07rem;
+  
 }
 .benift__top__content
 {
-  font-size: 0.99rem;
-  line-height: 1.6rem;
+  font-size: 0.90rem;
+  line-height: 1.9rem;
   margin-top: 1.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   color: #e7e6e8;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 0.09rem;
 
 }
 .benift__buttonbox
@@ -1106,12 +1142,13 @@ header h2 {
   align-items: center;
   gap:0.80rem;
   margin-bottom: 1.5rem;
-  margin-top: -7rem;
+  margin-top: -6rem;
+  padding: 2.5rem 0rem;
 }
 
 .card__item
 {
-  padding: 0.95rem;
+  padding:2rem 0.90rem;
   margin-top: 0.20rem;
   background-color: #ffffff;
   color: #23327c;
@@ -1163,9 +1200,9 @@ width: 50px;
  font-size: 0.875rem;
  text-align: center;
  margin-top: 1rem;
- line-height: 1.3rem;
+ line-height: 1.7rem;
  margin-bottom: 1rem;
- font-weight: 600;
+ font-weight: 400;
  color: #0f0e11;
 }
 .card__item:hover .card__benifit__head, .card__item:hover .card__benift__content
@@ -1951,8 +1988,10 @@ box-shadow:  -27px 27px 53px #cecece,
 /*=============== PRODUCT AND SERVICE   SECTION ===============*/
 .product__service_section
 {
-  background-color: #f1efef;
-  padding: 5rem 2rem
+  background-image: linear-gradient(0deg, rgba(25, 27, 29, 0.74), rgba(9, 16, 22, 0.434)), url('../img/1.jpeg'); 
+  background-position: 50% 50%;
+  padding: 8rem 1rem;
+  object-fit: cover;
 }
 .product__service_container
 {
@@ -1995,9 +2034,10 @@ box-shadow:  -27px 27px 53px #cecece,
   white-space: nowrap;
   animation: typing 3s steps(40, end) infinite;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   font-family: 'Roboto', sans-serif;
-  color: #04537a;
+  color: #eeeff0;
+  margin-bottom: 1.75rem;
 }
 @keyframes typing {
   from {
@@ -2009,13 +2049,16 @@ box-shadow:  -27px 27px 53px #cecece,
   
 }
 .product__service__content p{
-  font-size: 0.98rem;
-  line-height: 1.9rem;
-  width: 85%;
+  font-size: 0.95rem;
+  line-height: 2.1rem;
+  font-weight: 500;
+  width: 90%;
+  margin-bottom: 5rem;
+  color: #eeeff0;
 }
 .product__service__Box
 {
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 1.5rem;
 }
 .product__service__Box a{
@@ -2028,12 +2071,10 @@ box-shadow:  -27px 27px 53px #cecece,
 }
 .ps__box
 {
-  height: 280px;
+ 
   border-radius: 25px;
-background: linear-gradient(225deg, #cccccc, #f3f3f3);
-box-shadow:  -8px 8px 11px #dedede,
-             8px -8px 11px #e8e8e8;
-  padding: 0.875rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.3rem 1.5rem;
 }
 .ps__box .imgbox
 {
@@ -2047,16 +2088,16 @@ box-shadow:  -8px 8px 11px #dedede,
 .ps__content h4
 {
 text-align: center;
-margin-bottom: 0.40rem;
-color: #282829;
+margin-bottom: 1.5rem;
+color: #eeeff0;
 font-weight: 600;
 }
 .ps__content p
 {
    font-size: 0.90rem;
-   line-height: 1.6rem;
+   line-height: 1.9rem;
    text-align: start;
-   color: #102d55;
+   color: #eeeff0;
 }
 .next__btn
 {
@@ -2074,10 +2115,7 @@ font-weight: 600;
 
 @media (max-width:932px)
 {
- .product__service_section
- {
-  padding: 2.5rem 1rem;
- }
+
   .product__service_container
   {
     grid-template-columns:repeat(1,1fr);
@@ -2114,10 +2152,7 @@ font-weight: 600;
     grid-template-columns: repeat(1,1fr);
     gap: 4rem;
   }
-  .product__service_section
-  {
-    padding: 2rem 0.80rem
-  }
+ 
   .product__service__content
   {
     display: flex;
@@ -2610,7 +2645,7 @@ font-weight: 600;
   padding: 0.5rem 0rem;
   color: #f8f8f8;
   font-size: 1.01rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
 }
 .about__rightBox
 {
@@ -2666,7 +2701,7 @@ font-weight: 600;
 .aboutsecond__right p{
   font-size: 0.95rem;
   color: #f7f6f6;
-  line-height: 1.7rem;
+  line-height: 2rem;
   margin-bottom: 2rem;
 }
 .aboutsecond__bottom
@@ -2678,7 +2713,7 @@ font-weight: 600;
   font-size: 0.95rem;
   color: #f7f6f6;
   margin-bottom: 1rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
 }
 .about__third
 {
