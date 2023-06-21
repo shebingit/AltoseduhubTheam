@@ -90,18 +90,16 @@ window.addEventListener('scroll', scrollUp)
 
 // ************* Reduce the Height of Navbar ********
 
-var navbar = document.querySelector('.nav');
-var scrolled = false;
-
 window.addEventListener('scroll', function() {
-  if (window.scrollY > 0 && !scrolled) {
-    navbar.classList.add('scrolled');
-    scrolled = true;
-  } else if (window.scrollY === 0 && scrolled) {
-    navbar.classList.remove('scrolled');
-    scrolled = false;
-  }
-});
+    var navbar = document.getElementById('navbar');
+    var scrollPosition = window.scrollY || window.pageYOffset;
+  
+    if (scrollPosition > 0) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
 
 
@@ -126,14 +124,16 @@ for (var i = 0; i < navLinks.length; i++) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    var parallaxContainer = document.querySelector('.parallax');
-    
-    var moveBackground = function() {
-      var scrollTop = window.pageYOffset;
-      parallaxContainer.style.backgroundPositionY = -scrollTop * 0.5 + 'px';
-    };
-  
-    // Listen for scroll events
-    window.addEventListener('scroll', moveBackground);
-  });
+// image chenge on background top section
+
+const bg =document.getElementById('Top_Section');
+window.addEventListener('scroll',function()
+{
+  bg.style.backgroundSize = 100 - +this.window.pageYOffset/12+'%';
+  bg.style.opacity = 1- +this.window.pageXOffset/700 +'';
+})
+
+
+
+
+

@@ -6,24 +6,26 @@
 
               <section class="Top_section " id="Top_Section" >
 
-                <div class="home__container parallax container-fluid flex " >
+                <div class="home__container  container-fluid grid " >
                     <div class="home__data"  >
                         <h1 class="home__title" data-aos="zoom-in" data-aos-duration="2500">Discover, Customize, and  Transform  </h1>
                         <p class="home__description1 "data-aos="zoom-in" data-aos-duration="2500">
-                            <span> Discover a collection of professionally designed<br> website templates that empower your brand and
-                                captivate your audience<br> making your online presence truly extraordinary.
-                            </span> 
-                            
-                        </p>
+                            <span> Discover a collection of professionally designed website templates that empower your brand and   </span> 
+                            <span>captivate your audience making your online presence truly extraordinary.</span>
+                        </p>                 
+                    </div>
+                    <div class="righttop_img">
+                        <img src="{% static 'img/top_rightbg.png' %}" class="rotating-image" alt="">
                     </div>
 
                 </div>
                
-               
+                
               </section>
 
+            
               <!-- =================== TEMPLATE LIST =======================-->
-              <section class="Templates_section section " >
+              <section class="Templates_section section" >
                 <div class="template__container container-fluid grid" >
                    
                     <div class="template__listBox">
@@ -215,16 +217,13 @@
                             range of beautifully designed and customizable themes that empower your online presence with style,
                             functionality, and unmatched quality.
                         </P>
-                        <div class="benift__buttonbox">
-                            <a href="{% url 'AboutPage' %}"><button class="benift__btn buttons">Discover Altos <i class="ri-arrow-right-s-line"></i></button></a>
-                        </div>
+                        
 
                     </div>
-                    <div class="benift__right ">
-                       
-                            <img src="{% static 'img/.jpg' %}" alt="#" class="parallax">
-                       
+                    <div class="benift__buttonbox">
+                        <a href="{% url 'AboutPage' %}"><button class="benift__btn buttons">Discover Altos <i class="ri-arrow-right-s-line"></i></button></a>
                     </div>
+                   
                 </div>
                 <div class="container-fluid">
                     <div class="card__box">
@@ -516,6 +515,7 @@
             </section>
 
 
+            
               
 {% endblock %}
         

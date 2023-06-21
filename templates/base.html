@@ -55,7 +55,7 @@
        
         <!--=============== HEADER ===============-->
         <header class="header">
-            <nav class="nav container">
+            <nav class="nav container-fluid" id="navbar">
                 <div class="nav__data">
                     <a href="#" class="nav__logo">
                         <img src="{% static 'img/favicon.ico' %}" class="logo__img" alt="logo"></i> ALTOS Theme Hub
@@ -83,165 +83,7 @@
                         <li>
                             <a href="{% url 'categoryPage' %}" class="nav__link">Categeory</a>
                         </li>
-                        <!--=============== DROPDOWN 1 ===============-->
-                        <!-- <li class="dropdown__item">                      
-                            <div class="nav__link dropdown__button">
-                                Categeory <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-flashlight-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Most viewed courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="{% url 'categoryPage' %}" class="dropdown__link">HTML for beginners</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Advanced CSS</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">JavaScript OOP</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-heart-3-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Popular courses</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Development with Flutter</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development with React</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Backend development expert</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-book-mark-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Careers</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Applications development</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">UI/UX design</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Informatic security</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-file-paper-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Certifications</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Course certificates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free certifications</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
-
-                        <!--=============== DROPDOWN 2 ===============-->
-                        <!-- <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Categeory <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-code-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Web templates</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Free templates</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Premium templates</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-pen-nib-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Designs</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Web designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">App designs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Component design</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-    
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-apps-2-line"></i>
-                                        </div>
-    
-                                        <span class="dropdown__title">Others</span>
-    
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Recent blogs</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Tutorial videos</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Webinar</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
-
+                        
                         <li>
                             <a href="{% url 'PricingPage' %}" class="nav__link">Plan & Pricing</a>
                         </li>
@@ -252,7 +94,7 @@
                             <a href="{% url 'ContactPage' %}" class="nav__link">Contact</a>
                         </li>
                         <li>
-                            <a href="#" class="nav__link">
+                            <a href="{% url 'BlogPage' %}" class="nav__link">
                               
                                 <i class="ri-shopping-cart-fill"></i>
                             </a>
@@ -380,9 +222,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
-        </script>
-
-        
+        </script        
 
     </body>
 </html>

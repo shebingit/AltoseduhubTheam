@@ -22,3 +22,6 @@ def AboutPage(request):
 
 def ContactPage(request):
     return render(request,'contact.html')
+
+def BlogPage(request):
+    return render(request,'blog.html')
