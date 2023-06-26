@@ -66,15 +66,19 @@
         font-family: "Roboto", "Arial","sans-serif";
         margin-bottom: 1.25rem;
         font-weight: 500;
+        line-height: 1.9rem;
+        letter-spacing: 0.06rem;
     }
     .blog_contentBox p, .blog_contentBox a{
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-bottom: 1rem;
+        line-height: 1.5rem;
     }
     .blog_imgBox
     {
         height: 500px;
         max-width: 100%;
+        margin-bottom: 1rem;
     }
     .blog_imgBox img{
         width: 100%;
@@ -85,6 +89,24 @@
         margin-top: 2rem;
         font-size: 0.95rem;
         text-decoration: underline;
+    }
+    @media(max-width:575px)
+    {
+    .blog_section
+    {
+       
+        background:#ffff ;
+        padding: 5rem 1rem;
+    }
+        .blog_container
+        {
+        grid-template-columns:repeat(1,1fr); 
+        gap: 1.6rem;
+        }
+        .blog_imgBox
+        {
+            height: 250px;
+        }
     }
 </style>
 

@@ -126,12 +126,14 @@ for (var i = 0; i < navLinks.length; i++) {
 
 // image chenge on background top section
 
-const bg =document.getElementById('Top_Section');
+const bg =document.getElementById('');
 window.addEventListener('scroll',function()
 {
   bg.style.backgroundSize = 100 - +this.window.pageYOffset/12+'%';
   bg.style.opacity = 1- +this.window.pageXOffset/700 +'';
 })
+
+
 
 
 
