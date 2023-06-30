@@ -16,15 +16,11 @@
                     industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and 
                     scrambled it to make a type specimen book. 
-                </p>
-           
-            
-            <div class="outerBox">
-                <div class="innerBox">
-                    <img src="{% static 'img/product_service.png' %}"  alt="#">
-                </div>
-            </div>
+                </p>  
         </div>
+        
+    </div>
+
         <div class="product__service__Box grid">
             <a href="#">
                 <div class="ps__box">
@@ -118,27 +114,6 @@
 </section>
 
 
-<!--=====================NEWS LETTER SECTION ==========================-->
-    
-<section class="newsletter__section section" >
-    <div class="newsletter__container container flex">
-        <div class="newsletter__top ">
-            <h1>Connect Us By a Single Click !</h1>
-        </div>
-        <div class="newsletter__formBox">
-            <form action="#" method="post">
-                {% csrf_token %}
-
-                <div class="form__inputbox">
-                   
-                    <input type="email" placeholder="Enter a valid email id" required>
-                    <button type="submit">SEND US</button>
-                    
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
 
 
 <!--===================== PRODUCT SERVICE CONTENT SECTION ==========================-->
@@ -146,7 +121,9 @@
     <div class="PScontent__container container ">
        
         <div class="pscontent__box flex">
-            <div class="psimgBox"></div>
+            <div class="psimgBox">
+             
+            </div>
             <div class="pscontent">
                 <div class="PScontent__top ">
                     <h1>More About Product And Service  !</h1>
@@ -165,6 +142,21 @@
 
         </div>
     </div>
+    <div class="area" >
+
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
 </section>
 
 <style>

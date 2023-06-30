@@ -2,6 +2,26 @@
 {% load static %}
 {% block content %}
 
+<style>
+    .template__card
+    {
+    background-color: rgb(255, 255, 255);
+    margin: 0.20rem 0.30rem;
+    -webkit-animation: bannermove 10s linear infinite;
+    animation: bannermove 10s linear infinite ;
+    }
+
+
+    @keyframes bannermove {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-110%);
+    }
+    }
+</style>
+
     <!--==================== TOP SECTION ====================-->
 
               <section class="Top_section " id="Top_Section" >
@@ -509,30 +529,15 @@
               </section>
 
 
-    <!--=====================NEWS LETTER SECTION ==========================-->
-            <section class="newsletter__section section" >
-                <div class="newsletter__container container flex">
-                    <div class="newsletter__top ">
-                        <h1>Connect Us By a Single Click !</h1>
-                        
-                    </div>
-                    <div class="newsletter__formBox">
-                        <form action="#" method="post">
-                            {% csrf_token %}
-
-                            <div class="form__inputbox">
-                               
-                                <input type="email" placeholder="Enter a valid email id" required>
-                                <button type="submit">SEND US</button>
-                                
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
 
             
+
+    <!--=====================NEWS LETTER SECTION ==========================-->
+
+    
+
+
+   
               
 {% endblock %}
         

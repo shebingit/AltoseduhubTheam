@@ -833,6 +833,7 @@ height: 100%;
   padding: 1rem 2rem;
   overflow-y: scroll;
   scroll-behavior: smooth;
+
 }
 .template_leftBox h2{
   color: #fefefe;
@@ -862,6 +863,7 @@ height: 100%;
   background-color: rgb(255, 255, 255);
   margin: 0.20rem 0.30rem;
 }
+
 .template__list
 {
   height: 200px;
@@ -872,6 +874,7 @@ height: 100%;
   width: 100%;
   object-fit: fill;
 }
+
 .template__card:hover
 {
   margin-top: -0.5rem;
@@ -1012,7 +1015,7 @@ height: 100%;
 /*============= BENIFITS SECTION===============*/
 .benift__section
 {
-  background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.711), rgba(12, 20, 27, 0.585)), url('../img/page_bg1.jpeg'); 
+  background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.511), rgba(12, 20, 27, 0.385)), url('../img/bg_top2.jpg');  
   background-size:100%;
   background-position:center;
   background-attachment:fixed ;
@@ -1237,20 +1240,20 @@ color: #fbfbfb;
 /* ===============CLIENT SECTION =============*/
 .client__section
 {
-  background-color: #fefefe;
+  background-color: #f9f6f6;
   padding: 6rem 1rem;
 }
 .client__top h3
 {
   text-align: center;
-  font-size: 2.6rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   letter-spacing: 0.08rem;
   margin-bottom: 1.2rem;
   color: #222121;
 }
 .client__top p{
-  font-size: 0.99rem;
+  font-size: 1rem;
   margin-bottom: 0.40rem;
   text-align: center;
   line-height: 1.6rem;
@@ -1280,8 +1283,8 @@ color: #fbfbfb;
 }
 .client__logo img{
   width: 100%;
-  height: 100%;
-  flex: 0 0 20%;
+  aspect-ratio: 4/3;
+ object-fit: contain;
 }
 .client__testmonial
 {
@@ -1558,6 +1561,7 @@ box-shadow:  -27px 27px 53px #cecece,
   background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.659), rgba(12, 20, 27, 0.648)), url('../img/page_bg4.jpg');
   background-size: cover;
 
+
 }
 
 .categeory_headBox
@@ -1704,8 +1708,9 @@ box-shadow:  -27px 27px 53px #cecece,
 /*=============== CATEGORY TEMPLATE SECTION ===============*/
     .category_Tempsection
     {
-        background-color: #663dff;
-        background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+      background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.659), rgba(12, 20, 27, 0.648)), url('../img/page_bg4.jpg');
+      background-size: cover;
+      background-attachment: fixed;
         
     }
     .category_Tempsection .wrapper{
@@ -1849,7 +1854,7 @@ box-shadow:  -27px 27px 53px #cecece,
 
 .newsletter__section
 {
-  background-image:  url('../img/cilentbg3.png'); 
+  /* background-image:  url('../img/cilentbg3.png');  */
   background-position: 70% 30%;
   
 }
@@ -1929,41 +1934,35 @@ box-shadow:  -27px 27px 53px #cecece,
 }
 .product__service_container
 {
-  grid-template-columns: 1.5fr 2.2fr;
+  grid-template-columns: 2.5fr 0.7fr;
   gap: 1rem;
+
 }
 .product__service__content
 {
   margin-top: 0.50rem;
- 
-  padding: 1.2rem 1rem;
+  padding: 1rem;
+  text-align: center;
   
+}
+.pscontent
+{
+  border: 2px solid #06ba24;
 }
 .outerBox
 {
   margin-top: 1rem;
-  height: 220px;
-  width:290px;
-  background-image: url('../img/product_service.png');
-  /* background: #40e45b; */
+ 
+  width: 100%;
+  background-image: url('../img/product_pagebg1.jpg');
+  background-size: 100%;
+  object-fit: cover;
   padding: 0.80rem;
 }
-.innerBox
-{
-  height: 250px;
-  width: 270px;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-}
-.innerBox img{
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
 
-}
 
 .product__service__content h2{
-  font-size:2.5rem;
+  font-size:4.5rem;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 3s steps(40, end) infinite;
@@ -1986,15 +1985,16 @@ box-shadow:  -27px 27px 53px #cecece,
   font-size: 0.95rem;
   line-height: 2.1rem;
   font-weight: 500;
-  width: 90%;
+  width: 60%;
   margin-bottom: 5rem;
   color: #eeeff0;
   letter-spacing: 0.08rem;
 }
 .product__service__Box
 {
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 1.5rem;
+  padding: 1rem 2rem;
 }
 .product__service__Box a{
   scale: 0.98;
@@ -2007,7 +2007,7 @@ box-shadow:  -27px 27px 53px #cecece,
 .ps__box
 {
  
-  border-radius: 25px;
+
   background-color: rgba(11, 11, 11, 0.91);
   padding: 3rem 1.8rem;
 }
@@ -2127,8 +2127,9 @@ font-weight: 500;
 
 .PScontent__section
 {
-    padding: 8rem 1rem;
-    background: #1a1919;
+    padding: 6rem 1rem;
+    background-image: linear-gradient(to top, #060d20, #0c0f21, #101122, #141322, #171523);
+    
 }
 
 .PScontent__top
@@ -2137,8 +2138,8 @@ font-weight: 500;
   margin-bottom: 2rem;
 }
 .PScontent__top h1{
-    font-weight: 500;
-    font-size: 3.5rem;
+    font-weight: 600;
+    font-size: 3.8rem;
     font-family: 'Helvetica', sans-serif;
     color: #f9f9f9;
     letter-spacing: 0.08rem;
@@ -2153,22 +2154,24 @@ font-weight: 500;
 }
 .psimgBox
 {
-  background-image: url('../img/product_service.png');
-  width: 40%;
+  background-image: url('../img/product_pagebg1.jpg');
+  
+  background-size: 100%;
   height: 450px;
-  border-radius: 50%;
 }
+
 .pscontent
 {
-  width: 55%;
-  padding-left: 2rem;
+ 
+  padding: 4rem 1rem;
 }
 .pscontent p{
-  line-height:2.2rem;
+  line-height:1.8rem;
   font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.10rem;
+  letter-spacing: 0.07rem;
   font-size: 1rem;
   color: #c3c3c3;
+  
 }
 
 @media (max-width:932px)
@@ -2183,7 +2186,7 @@ font-weight: 500;
 {
   .PScontent__section
   {
-    padding: 1.5rem 0.90rem;
+    padding: 1.5rem 0rem;
   }
  .pscontent__box
  {
@@ -2195,14 +2198,14 @@ font-weight: 500;
   height: 270px;
  }
  .PScontent__top h1{
-  font-size: 1.7rem;
-  line-height:2.5rem;
+  font-size: 1.5rem;
+  line-height:2.2rem;
 
 }
  .pscontent
 {
   width: 100%;
-  padding-left: 0.1rem;
+  padding: 0.80rem;
 }
 
 }
@@ -2224,7 +2227,7 @@ font-weight: 500;
 .pricing__top h2
 {
   margin-top: 2rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 500;
   color: #ededed;
   font-family: 'Roboto', sans-serif;
@@ -2408,16 +2411,17 @@ font-weight: 500;
 }
 .pricingBottom__top
 {
-  width: 50%; 
+  width: 55%; 
 }
 .pricingBottom__top h1{
-  font-size: 2.8rem;
+  font-size: 4rem;
   color: #f2f4f5;
   font-weight:600;
-  letter-spacing: 0.09rem;
+  letter-spacing: 0.06rem;
   font-family: 'Roboto', sans-serif;
-  line-height: 3.4rem;
+  line-height: 5.4rem;
   text-shadow: 5px 5px 5px rgba(77, 73, 73, 0.2);
+  
 }
 .pricingBottom__content
 {
@@ -2550,7 +2554,7 @@ font-weight: 500;
 .about_section
 {
   padding: 6rem 1rem;
-  background-color: rgba(0, 0, 0, 1);
+ 
 }
 .about__container
 {
@@ -2560,36 +2564,42 @@ font-weight: 500;
 {
   grid-template-columns: 1fr 2fr;
   justify-content: flex-start;
-  padding: 3rem 0.90rem;
+  padding: 3rem 0.50rem;
   gap: 1.5rem;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+.about__leftBox 
+{
+  padding: 1rem;
 }
 .about__leftBox h1
 {
   padding: 1.5rem 0rem;
   color: #ecedee;
-  font-size: 2rem;
+  font-size: 4.5rem;
+  font-weight: 500;
 }
 .about__leftBox p
 {
   padding: 0.5rem 0rem;
   color: #f8f8f8;
-  font-size: 1.01rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 .about__rightBox
 {
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
 
 }
-.about__rightBox:nth-child(2)
-{
-  background-color:rgba(0, 0, 0, 0.5);
-}
+
 .about__imageBox
 {
-  height: 500px;
-  width: 55%;
+  height: 600px;
+ 
 }
 .about__imageBox img
 {
@@ -2601,7 +2611,7 @@ font-weight: 500;
   width: 60%;
 }
 .about__rightBox_content p{
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #f7f6f6;
   line-height: 1.7rem;
   padding-left: 1.5rem;
@@ -2749,14 +2759,14 @@ font-weight: 500;
   }
   .about__imageBox
   {
-    height: 300px;
-    width: 290px;
+    height: auto;
+   
   }
   .about__imageBox img
   {
     max-width: 100%;
     height: 100%;
-    object-fit: fill;
+    background-size: cover;
   }
   .about__rightBox_content
   {
@@ -2854,9 +2864,10 @@ font-weight: 500;
   height: 45px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #373634;
+  border-bottom: 1px solid#c3bfb8;
   color: #f7f6f6;
 }
+
 .inputBox label{
   color: #f6f6f6;
 }
@@ -2865,7 +2876,11 @@ font-weight: 500;
   height: 100px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #373634;
+  border-bottom: 1px solid #c3bfb8;
+  color: #f7f6f6;
+}
+.inputBox input::placeholder, .inputBox textarea::placeholder
+{
   color: #f7f6f6;
 }
 .inputBox input:focus,.inputBox textarea:focus
@@ -2883,7 +2898,7 @@ font-weight: 500;
 {
   padding: 0.80rem 2rem;
   background: transparent;
-  border: 2px solid #373634;
+  border: 2px solid #95938f;
   color:  #ece8e8;
   font-weight: 600;
   letter-spacing: 0.10rem;
@@ -2978,7 +2993,9 @@ font-weight: 500;
 .templateView_section
 {
     padding: 5rem 1rem;
-    background: #fff;
+    background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.853), rgba(12, 20, 27, 0.727)), url('../img/template_pagebg.jpg'); 
+    background-size:100%;
+    background-position:100%;
 }
 .templateView__container
 {
@@ -2993,17 +3010,18 @@ font-weight: 500;
 .contentBox h1{
     font-weight: 500;
     letter-spacing: 0.06rem;
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     font-family: 'Roboto Condensed', sans-serif;
-    color: rgb(60, 60, 60);
+    color: rgb(244, 244, 244);
     margin-top: 2rem;
 }
 .contentBox p{
     font-size: 1rem;
     margin-bottom: 1rem;
-    font-family: 'Roboto Condensed', sans-serif;
-    line-height: 1.5rem;
+    
+    line-height: 1.7rem;
+    color: rgb(234, 232, 232);
 }
 .contentBox span
 {
@@ -3344,7 +3362,7 @@ font-weight: 500;
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(113, 180, 178, 0.897);
   animation: animate 25s linear infinite;
   bottom: -150px;
   
