@@ -676,7 +676,7 @@ header h2 {
  text-align:center ;
 }
 .home__data h1{
-  font-size:4rem ;
+  font-size:3.5rem ;
   margin-bottom: var( --mb-0-75);
   color: rgb(255, 253, 253);
   letter-spacing: 0.08rem;
@@ -1461,7 +1461,7 @@ box-shadow:  -27px 27px 53px #cecece,
 }
 .cardBox
 {
-  height: 300px;
+  height: auto;
   background-color: rgba(9, 21, 99, 0.3);
   border-radius: 12px;
   
@@ -1542,11 +1542,11 @@ box-shadow:  -27px 27px 53px #cecece,
   .product__content
   {
     grid-template-columns: repeat(1,1fr);
-    gap:4rem
+    
   }
   .cardBox
   {
-    height: 270px
+    height: auto;
   }
   
 }
@@ -1962,10 +1962,10 @@ box-shadow:  -27px 27px 53px #cecece,
 
 
 .product__service__content h2{
-  font-size:4.5rem;
+  font-size:2.15rem;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 3s steps(40, end) infinite;
+  animation: typing 7s steps(120, end) infinite;
   margin-bottom: 1rem;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
@@ -2016,12 +2016,17 @@ box-shadow:  -27px 27px 53px #cecece,
 {
 text-align: center;
 margin-bottom: 1.2rem;
-color: #eeeff0;
+background: -webkit-linear-gradient(#e811c8, #0fe4e8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 font-weight: 500;
+font-size: 1.3rem;
+letter-spacing: 0.06rem;
+
 }
 .ps__content p
 {
-   font-size: 0.90rem;
+   font-size: 0.85rem;
    line-height: 1.9rem;
    text-align: start;
    color: #eeeff0;
@@ -2087,6 +2092,10 @@ font-weight: 500;
   .product__service__content h2{
 
     animation: none;
+    white-space:wrap;
+    text-align: start;
+    line-height: 2.5rem;
+
   }
   .product__service__content
   {
@@ -2119,6 +2128,14 @@ font-weight: 500;
 {
   grid-template-columns: repeat(1,1fr);
   gap: 1.3rem;
+  padding: 1rem 0.60rem;
+}
+.ps__box
+{
+ 
+
+  background-color: rgba(11, 11, 11, 0.91);
+  padding: 2rem 0.90rem;
 }
 
 }
