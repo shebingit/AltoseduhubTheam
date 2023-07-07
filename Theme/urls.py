@@ -14,6 +14,19 @@ urlpatterns = [
     path('Contact',views.ContactPage,name='ContactPage'),
     path('Blog',views.BlogPage,name='BlogPage'),
     path('Templates',views.TemplateView,name='TemplateView'),
+
+
+    # ================ Admin section ===========
+
+    path('Dashboard',views.Dashboard,name='Dashboard'),
+    path('Categorie_Form',views.categorie_load,name='categorie_load'),
+    path('Categorie_Save',views.categorie_save,name='categorie_save'),
+    path('categorie_Edit',views.categorie_edit,name='categorie_edit'),
+    path('categeori_Edit_Save',views.categeori_edit_save,name='categeori_edit_save'),
+    path('Fetch_categories',views.fetch_categori,name='fetch_categori'),
+    path('categorie_List',views.categorie_list,name='categorie_list'),
+    path('my_view',views.my_view,name='my_view'),
+    
     
     ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
