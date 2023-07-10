@@ -10,11 +10,13 @@ def HomePage(request):
     title = "Altos Theme Store"
     meta_tags = ["tag1", "tag2", "tag3"]
     meta_description = "This is the meta description of my page."
+    templates = Templates.objects.all()[:5]
 
     context = {
         'title': title,
         'meta_tags': meta_tags,
         'meta_description': meta_description,
+        'templates':templates
         }
     return render(request,'index.html',context)
 
@@ -36,24 +38,31 @@ def categoryPage(request):
     title = "Best Templates for your site"
     meta_tags = ["tag1", "tag2", "tag3"]
     meta_description = "This is the meta description of my page."
-
+    categorie=Categorie.objects.all()
+    templates=Templates.objects.all()
     context = {
         'title': title,
         'meta_tags': meta_tags,
         'meta_description': meta_description,
+        'categorie':categorie,
+        'templates':templates
         }
     return render(request,'category.html',context)
 
 
-def TemplateView(request):
+def TemplateView(request,pk):
     title = "Template Preview"
     meta_tags = ["tag1", "tag2", "tag3"]
     meta_description = "This is the meta description of my page."
-
+    categorie=Categorie.objects.all()
+    templates=Templates.objects.all()
+    template=Templates.objects.get(id=pk)
     context = {
         'title': title,
         'meta_tags': meta_tags,
         'meta_description': meta_description,
+        'categorie':categorie,'template':template,
+        'templates':templates
         }
     return render(request,'view_template.html',context)
 
@@ -115,8 +124,10 @@ def BlogPage(request):
 
 
 def Dashboard(request):
+    categori_count=Categorie.objects.count()
+    template_count = Templates.objects.count()
     page_name='Dashboard'
-    return render(request,'admin/dashboard.html',{'page_name':page_name})
+    return render(request,'admin/dashboard.html',{'page_name':page_name,'categori_count':categori_count,'template_count':template_count})
 
 def categorie_load(request):
      page_name='Categorie'
@@ -125,7 +136,7 @@ def categorie_load(request):
 def categorie_save(request):
        
     if request.method=='POST':
-        print('hai')
+       
         categorie=Categorie()
         categorie.categorie_name=request.POST['categori_name']
         categorie.status=request.POST.get('visibility_opt')
@@ -149,11 +160,7 @@ def fetch_categori(request):
     value = request.GET.get('value')
     categorie=Categorie.objects.get(id=value)
     image_url = Categorie.objects.values_list('categorie_image', flat=True).get(id=value)
-    print(image_url)
-
-    # Fetch data from the model based on the selected value
-    #your_model_instance = YourModel.objects.get(id=value)
-    serialized_image = serializers.serialize('json', [categorie])
+    
     response = {
         'categorie_name': categorie.categorie_name,
         'categorie_tag': categorie.img_alttag,
@@ -204,10 +211,54 @@ def template_load(request):
     page_name='Template'
     return render(request,'admin/template_load.html',{'page_name':page_name,'categories':categories})
 
+
+def template_save(request):
+    
+    if request.method=='POST':
+       
+        template=Templates()
+        template.categori_id=Categorie.objects.get(id=int(request.POST['slect_categori']))
+        template.template_name=request.POST['temp_name']
+        template.template_discription=request.POST['temp_discription']
+        template.template_status=request.POST.get('radio__inputBox')
+        template.template_publish_date=request.POST['publish_date']
+        template.template_time=request.POST['publish_time']
+        template.template_img_alttag=request.POST['tag_name']
+        template.template_rating=request.POST.get('rating_opt')
+        template.template_price=request.POST['temp_price']
+        template.template_image=request.FILES.get('temp_img')
+        template.video_file = request.FILES['temp_video']
+        template.save()
+        msg= 'Template saved successfully.'
+        page_name='Template'
+        categories=Categorie.objects.all()
+        return render(request,'admin/template_load.html',{'page_name':page_name,'msg':msg,'categories':categories})
+
+
 def template_editload(request):
     categories=Categorie.objects.all()
+    templates=Templates.objects.all()
     page_name='Template'
-    return render(request,'admin/template_editlist.html',{'page_name':page_name,'categories':categories})
+    return render(request,'admin/template_editlist.html',{'page_name':page_name,'categories':categories,'templates':templates})
+
+
+def fetch_templates(request):
+    categories=Categorie.objects.get(id=int(request.GET.get('value')))
+    templates=Templates.objects.filter(categori_id=categories)
+   
+    
+    response = {
+        'templates':templates
+    }
+    return JsonResponse(response)
+
+
+def template_list(request):
+    categories=Categorie.objects.all()
+    templates=Templates.objects.all()
+    page_name='Template'
+    return render(request,'admin/template_list.html',{'page_name':page_name,'categories':categories,'templates':templates})
+
 
 
 def my_view(request):

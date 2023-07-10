@@ -45,7 +45,7 @@ align-items: center;
 /* Card container */
 .card {
 position: relative;
-max-width: 500px;
+max-width: 850px;
 }
 
 /* setting padding based on even or odd */
@@ -123,6 +123,7 @@ color: orangered;
 position: relative;
 margin-bottom: 1rem;
 letter-spacing: 0.06rem;
+font-size: 1.6rem;
 }
 
 /* Timeline dot  */
@@ -134,6 +135,9 @@ height: 10px;
 background: white;
 border-radius: 999px;
 border: 3px solid orangered;
+}
+.info p{
+  line-height: 1.8rem;
 }
 
 /* text right if the card is even  */
@@ -203,152 +207,16 @@ right: -45px;
                 <div class="template__container container-fluid grid" >
                    
                     <div class="template__listBox">
+                       {% for template in templates %}
+                        <div class="template__card">
+                           
+                              {% if template.template_image %}
+                                <img src="{{template.template_image.url}}" alt="{{template.template_img_alttag}}"> 
+                              {% endif %}
+                           
+                        </div>
+                        {% endfor %}
                        
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_5.webp' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_4.jpg' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_6.jpg' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="template__card">
-                            <div class="card_head template__list">
-                                <img src="{% static 'img/temp_7.webp' %}" alt="#"> 
-                            </div>
-                            <div class="card__content">
-                                <h4>Heading</h4>
-                                <p>Lorem Ipsum is simply dummy text of 
-                                    the printing and typesetting industry. 
-                                </p>
-                                <div class="rating__box">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                                <div class="card__bottom">
-                                    <p>$25</p>
-                                    <div class="action__box">
-                                        <a href="#" class="action_link"><button><i class="ri-shopping-cart-fill"></i></button></a>
-                                        <a href="#" class="action_link"><button>Preview</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="template__content">
                         <h2>Build Your Website With Altos Theme Hub</h2>
@@ -368,211 +236,156 @@ right: -45px;
 
               
     <!--=====================BENIFITS ==========================-->
-            
-              <section class="benift__section section " >
-                <div class="benifit__container container ">
-                    <div class="benift__top ">
+      
+    <section class="benift__section section " >
+      <div class="benifit__container container ">
+          <div class="benift__top ">
 
-                        <h1 class="benift__top__head">Altos Theme Store</h1>
-                        <P class="benift__top__content">
-                            Welcome to Altos Theme Store, your ultimate destination for premium website themes. 
-                            Discover a wide
-                            range of beautifully designed and customizable themes that empower your online presence with style,
-                            functionality, and unmatched quality.
-                        </P>
-                        
-                        <div class="benift__buttonbox">
-                            <a href="{% url 'ProductPage' %}"><button class="benift__btn buttons">Discover Altos <i class="ri-arrow-right-s-line"></i></button></a>
-                        </div>
+              <h1 class="benift__top__head">Altos Theme Store</h1>
+              <P class="benift__top__content">
+                  Welcome to Altos Theme Store, your ultimate destination for premium website themes. 
+                  Discover a wide
+                  range of beautifully designed and customizable themes that empower your online presence with style,
+                  functionality, and unmatched quality.
+              </P>
+              
+              <div class="benift__buttonbox">
+                  <a href="{% url 'ProductPage' %}"><button class="benift__btn buttons">Discover Altos <i class="ri-arrow-right-s-line"></i></button></a>
+              </div>
 
-                    </div>     
-                   
+          </div>     
+         
+      </div>
+      <div class="container benifit__listBox">
+          <h2>What Benefit</h2>
+          <div class="timeline">
+              <div class="outer">
+                <div class="card" >
+                  <div class="icon__box" data-aos="fade-up" data-aos-duration="1300">
+                      <img src="{% static 'img/b1.png' %}" alt="icon_image">
+                  </div>
+                  <div class="info" data-aos="fade-up" data-aos-duration="1300">
+                    <h3 class="title">Visually Stunning</h3>
+                    <p>
+                      Our templates are built with the latest web development standards, 
+                      ensuring compatibility with future updates and technologies. Stay ahead 
+                      of the curve and future-proof your website with our cutting-edge templates.
+                    </p>
+                  </div>
                 </div>
-                <div class="container benifit__listBox">
-                    <h2>What Benefit</h2>
-                    <div class="timeline">
-                        <div class="outer">
-                          <div class="card" >
-                            <div class="icon__box" data-aos="fade-up" data-aos-duration="1300">
-                                <img src="{% static 'img/b1.png' %}" alt="icon_image">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1300">
-                              <h3 class="title">Visually Stunning</h3>
-                              <p>
-                                Our templates are built with the latest web development standards, 
-                                ensuring compatibility with future updates and technologies. Stay ahead 
-                                of the curve and future-proof your website with our cutting-edge templates.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="icon__box" data-aos="fade-up" data-aos-duration="1400">
-                                <img src="{% static 'img/b2.png' %}" alt="icon_image">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1400">
-                              <h3 class="title">Customizable</h3>
-                              <p>
-                                Our templates are built with the latest web development standards, 
-                                ensuring compatibility with future updates and technologies. Stay ahead 
-                                of the curve and future-proof your website with our cutting-edge templates.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="icon__box" data-aos="fade-up" data-aos-duration="1500">
-                                <img src="{% static 'img/b3.png' %}" alt="icon_image">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1500">
-                              <h3 class="title">Optimized</h3>
-                              <p>
-                                Our templates are optimized for a seamless user experience, 
-                                ensuring intuitive navigation, fast loading times, and responsive design across all devices. 
-                                Delight your visitors with a website that is both visually
-                                appealing and user-friendly </p>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="icon__box" data-aos="fade-up" data-aos-duration="1600">
-                                <img src="{% static 'img/b4.png' %}" alt="icon_image">
-                            </div>
-                            <div class="info" data-aos="fade-up" data-aos-duration="1600">
-                              <h3 class="title">Crafted Templates</h3>
-                              <p>
-                                Our templates are meticulously crafted by top designers to ensure 
-                                eye-catching aesthetics that instantly
-                                captivate your audience and leave a lasting impression.
-                             </p>
-                            </div>
-                          </div>
-                          
-                        </div>
-                      </div>
-                    <!-- <div class="card__box">
-                        <div class="card__item" data-aos="fade-up"  data-aos-duration="500">
-                            <div class="icon__box">
-                                <img src="{% static 'img/b1.png' %}" alt="icon_image">
-                            </div>
-                            <h3 class="card__benifit__head">Visually Stunning</h3>
-                            <p class="card__benift__content">
-                                Our templates are built with the latest web development standards, 
-                                ensuring compatibility with future updates and technologies. Stay ahead 
-                                of the curve and future-proof your website with our cutting-edge templates.
-                                
-                            </p>
-                           
-                        </div>
-                   
-                   
-                        <div class="card__item" data-aos="fade-up"  data-aos-duration="1000">
-                            <div class="icon__box">
-                                <img src="{% static 'img/b2.png' %}" alt="icon_image">
-                            </div>
-                            <h3 class="card__benifit__head">Customizable</h3>
-                            <p class="card__benift__content">
-                                With our templates, you have full control over the customization process. 
-                                Easily tailor your website to align with your brand's unique identity and 
-                                stand out from the competition.
-                                
-                            </p>
-                        </div>
-                   
-                   
-                        <div class="card__item" data-aos="fade-up"  data-aos-duration="2000">
-                            <div class="icon__box">
-                                <img src="{% static 'img/b3.png' %}" alt="icon_image">
-                            </div>
-                            <h3 class="card__benifit__head">Optimized</h3>
-                            <p class="card__benift__content">
-                                Our templates are optimized for a seamless user experience, 
-                                ensuring intuitive navigation, fast loading times, and responsive design across all devices. 
-                                Delight your visitors with a website that is both visually
-                                appealing and user-friendly
-                                
-                            </p>
-                        </div>
-                   
-                        <div class="card__item" data-aos="fade-up"  data-aos-duration="3000">
-                            <div class="icon__box">
-                                <img src="{% static 'img/b4.png' %}" alt="icon_image">
-                            </div>
-                            <h3 class="card__benifit__head">Crafted Templates</h3>
-                            <p class="card__benift__content">
-                                Our templates are meticulously crafted by top designers to ensure 
-                                eye-catching aesthetics that instantly
-                                captivate your audience and leave a lasting impression.
-
-                            </p>
-                        </div>
-                    </div> -->
+                <div class="card">
+                  <div class="icon__box" data-aos="fade-up" data-aos-duration="1400">
+                      <img src="{% static 'img/b2.png' %}" alt="icon_image">
+                  </div>
+                  <div class="info" data-aos="fade-up" data-aos-duration="1400">
+                    <h3 class="title">Customizable</h3>
+                    <p>
+                      Our templates are built with the latest web development standards, 
+                      ensuring compatibility with future updates and technologies. Stay ahead 
+                      of the curve and future-proof your website with our cutting-edge templates.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon__box" data-aos="fade-up" data-aos-duration="1500">
+                      <img src="{% static 'img/b3.png' %}" alt="icon_image">
+                  </div>
+                  <div class="info" data-aos="fade-up" data-aos-duration="1500">
+                    <h3 class="title">Optimized</h3>
+                    <p>
+                      Our templates are optimized for a seamless user experience, 
+                      ensuring intuitive navigation, fast loading times, and responsive design across all devices. 
+                      Delight your visitors with a website that is both visually
+                      appealing and user-friendly </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="icon__box" data-aos="fade-up" data-aos-duration="1600">
+                      <img src="{% static 'img/b4.png' %}" alt="icon_image">
+                  </div>
+                  <div class="info" data-aos="fade-up" data-aos-duration="1600">
+                    <h3 class="title">Crafted Templates</h3>
+                    <p>
+                      Our templates are meticulously crafted by top designers to ensure 
+                      eye-catching aesthetics that instantly
+                      captivate your audience and leave a lasting impression.
+                   </p>
+                  </div>
                 </div>
                 
-                 
-                
-              </section>
+              </div>
+            </div>
+         
+      </div>
+      
+       
+      
+    </section>
+           
 
     <!--=====================PRODUCT SECTION ==========================-->
 
-                <section class="product__section section" >
-                    <div class="product__container container grid">
-                        <div class="product__top " data-aos="fade-right"
-                        data-aos-duration="1500"
-                        data-aos-easing="ease-in-sine">
-                            <h2>We’ll Help You Get Started</h2>
-                            <!-- <p></p> -->
-                            <div class="product__btnBox">
-                                <a href="{% url 'ProductPage' %}"><button>LOOK OUR PRODUCT</button></a>
-                            </div>
-                        </div>
-                        <div class="product__content">
-                            <div class="product__box">
-                                <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1500">
-                                    <h1>01</h1>
-                                    <div class="inner__cardbox">
-                                        <h3>Crafted Templates</h3>
-                                        <p>
-                                            We Will Help You to Get Started with the Perfect Template. Choose from our vast collection of
-                                            professionally designed templates, tailored to suit various industries and preferences. Find the ideal
-                                            starting point for your website and set the stage for your online success.
-                                            
-                                            
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product__box">
-                                <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1400">
-                                    <h1>02</h1>
-                                    <div class="inner__cardbox">
-                                        <h3>Visually Stunning</h3>
-                                        <p>
-                                            We Will Help You to Get Started with a Stunning Website. Our experienced team of developers will bring
-                                            your vision to life, creating a website that not only looks impressive but also delivers a seamless user
-                                            experience. From responsive design to interactive features, we'll ensure your website stands out from
-                                            the crowd. 
-                                        </p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product__box">
-                                <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1300">
-                                    <h1>03</h1>
-                                    <div class="inner__cardbox">
-                                        <h3>Heading</h3>
-                                        <p>
-                                            We Will Help You to Get Started with Effective Digital Marketing Strategies. Maximize your online reach,
-                                            drive targeted traffic, and achieve measurable results. Our digital marketing experts will craft tailored
-                                            strategies, utilizing SEO, social media, PPC, and more, to elevate your brand's visibility and accelerate
-                                            your growth.
-                                            
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                </section>
+    <section class="product__section section" >
+      <div class="product__container container grid">
+          <div class="product__top " data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-sine">
+              <h2>We’ll Help You Get Started</h2>
+              <!-- <p></p> -->
+              <div class="product__btnBox">
+                  <a href="{% url 'ProductPage' %}"><button>LOOK OUR PRODUCT</button></a>
+              </div>
+          </div>
+          <div class="product__content">
+              <div class="product__box">
+                  <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1500">
+                      <h1>01</h1>
+                      <div class="inner__cardbox">
+                          <h3>Crafted Templates</h3>
+                          <p>
+                              We Will Help You to Get Started with the Perfect Template. Choose from our vast collection of
+                              professionally designed templates, tailored to suit various industries and preferences. Find the ideal
+                              starting point for your website and set the stage for your online success.
+                              
+                              
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="product__box">
+                  <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1400">
+                      <h1>02</h1>
+                      <div class="inner__cardbox">
+                          <h3>Visually Stunning</h3>
+                          <p>
+                              We Will Help You to Get Started with a Stunning Website. Our experienced team of developers will bring
+                              your vision to life, creating a website that not only looks impressive but also delivers a seamless user
+                              experience. From responsive design to interactive features, we'll ensure your website stands out from
+                              the crowd. 
+                          </p>
+                         
+                      </div>
+                  </div>
+              </div>
+              <div class="product__box">
+                  <div class="cardBox" data-aos="zoom-out-right" data-aos-duration="1300">
+                      <h1>03</h1>
+                      <div class="inner__cardbox">
+                          <h3>Heading</h3>
+                          <p>
+                              We Will Help You to Get Started with Effective Digital Marketing Strategies. Maximize your online reach,
+                              drive targeted traffic, and achieve measurable results. Our digital marketing experts will craft tailored
+                              strategies, utilizing SEO, social media, PPC, and more, to elevate your brand's visibility and accelerate
+                              your growth.
+                              
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+  </section>
 
 
     <!--=====================CLIENTS SECTION ==========================-->

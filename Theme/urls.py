@@ -13,7 +13,7 @@ urlpatterns = [
     path('About',views.AboutPage,name='AboutPage'),
     path('Contact',views.ContactPage,name='ContactPage'),
     path('Blog',views.BlogPage,name='BlogPage'),
-    path('Templates',views.TemplateView,name='TemplateView'),
+    path('Templates/<int:pk>',views.TemplateView,name='TemplateView'),
 
 
     # ================ Admin section ===========
@@ -24,11 +24,14 @@ urlpatterns = [
     path('categorie_Edit',views.categorie_edit,name='categorie_edit'),
     path('categeori_Edit_Save',views.categeori_edit_save,name='categeori_edit_save'),
     path('Fetch_categories',views.fetch_categori,name='fetch_categori'),
+    path('Fetch_Templates',views.fetch_templates,name='fetch_templates'),
     path('categorie_List',views.categorie_list,name='categorie_list'),
 
     #=========Template urls=========
     path('Template_Form',views.template_load,name='template_load'),
+    path('Template_List',views.template_list,name='template_list'),
     path('Template_Edit_List',views.template_editload,name='template_editload'),
+    path('Template_save',views.template_save,name='template_save'),
 
     path('my_view',views.my_view,name='my_view'),
     

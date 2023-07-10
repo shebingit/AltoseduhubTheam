@@ -63,6 +63,23 @@
         font-size: 0.80rem;
         border: 1px solid #ecebeb;
     }
+    .video__Box
+    {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        border: 1px solid #ecebeb;
+    }
+    #video_display
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
   
     .input__group select:focus
     {
@@ -72,6 +89,14 @@
     .input__group input::placeholder
     {
         font-size: 0.80rem;
+    }
+    .action__section
+    {
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+        gap:1rem ;
+        margin-top: 0.50rem;
     }
     
     @media (max-width:575px)
@@ -104,11 +129,11 @@
 
 <section class="template section">
     <div class="container">
-        <form class="section__form" action="{% url 'categorie_save' %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
+        <form class="section__form" >
+            
             <div class="form__head">
-                <h2>Template Pick</h2>
-                <button type="submit" id="">Go For Edit</button>
+                <h2>Template Edit</h2>
+               
             </div>
             <div class="input__section">
                 <div class="card">
@@ -137,8 +162,8 @@
                         <select  name="slect_categori" id="Categori_Select">
     
                             <option value="0">----/---</option>
-                            {% for categori in categories %}
-                            <option value="{{categori.id}}">{{categori.categorie_name}}</option>
+                            {% for template in templates %}
+                            <option value="{{template.id}}">{{template.template_name}}</option>
                             {% endfor %}
     
                         </select>
@@ -160,19 +185,36 @@
             <h2>Templates </h2>
         </div>
         <div class="template__list">
-            {% for categori in categories %}
+            {% for template in templates %}
             <div class="card mb-3 ">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    {% if categori.categorie_image %}
-                    <img src="{{categori.categorie_image.url}}" class="img-fluid rounded-start" alt="{{categori.img_alttag}}">
+                    {% if template.template_image %}
+                    <img src="{{template.template_image.url}}" class="img-fluid rounded-start" alt="{{template.template_img_alttag}}">
                     {% endif %}
                   </div>
+                  
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">{{categori.categorie_name}}</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="action__section">
+                            <a href="#"><i class="bi bi-pencil-square"></i></a>
+                            <a href="#"><i class="bi bi-trash"></i></a>
+                        </div>
+                      <h5 class="card-title">{{template.template_name}}</h5>
+                      <p class="card-text">{{template.template_discription}}</p>
+                      <p class="card-text">{{template.template_publish_date}}</p>
+                      <p class="card-text">{{template.template_price}}</p>
+                      <p class="card-text">{{template.template_rating}}</p>
+
+                      
                     </div>
+                  </div>
+                  <div class="col-md-12 video__Box">
+                    {% if template.video_file %}
+                   
+                        <video src="{{template.video_file.url}}" id="video_display" controls></video>
+                    
+                    {% endif %}
                   </div>
                 </div>
             </div>
@@ -181,5 +223,29 @@
         </div>
     </div>
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+  $(document).ready(function() {
+    $('#Categori_Select').change(function() {
+      var selectedValue = $('#Categori_Select').val();
+    
+      $.ajax({
+        url: "{% url 'fetch_templates' %}",
+        data: { value: selectedValue },
+        dataType: 'json',
+        success: function(response) {
+            
+        },
+        error: function(xhr, textStatus, error) {
+            // Handle the error response
+            console.log(error);
+          }
+      });
+    });
+  });
+
+</script>
 
 {% endblock %}

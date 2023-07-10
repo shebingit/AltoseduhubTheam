@@ -296,10 +296,10 @@
           $('#img_tag').val(response.categorie_tag); 
           $('#dateInput').val(response.categorie_date);
           $('#timeInput').val(response.categorie_time);
-          //var imageContainer = $('#img_Box');
-           // imageContainer.empty();
-           // imageContainer.append('<img src="' + response.image + '">');
-            var radioValue = response.radioValue;
+          var imageContainer = $('#img_Box');
+          imageContainer.empty();
+          imageContainer.append('<img src="' + response.image + '">');
+          var radioValue = response.radioValue;
         // Set the checked property of the radio button based on the response value
             $('input[name="visibility_opt"]').each(function(index) {
                
