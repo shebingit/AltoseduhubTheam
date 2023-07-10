@@ -25,8 +25,14 @@ urlpatterns = [
     path('categeori_Edit_Save',views.categeori_edit_save,name='categeori_edit_save'),
     path('Fetch_categories',views.fetch_categori,name='fetch_categori'),
     path('categorie_List',views.categorie_list,name='categorie_list'),
+
+    #=========Template urls=========
+    path('Template_Form',views.template_load,name='template_load'),
+    path('Template_Edit_List',views.template_editload,name='template_editload'),
+
     path('my_view',views.my_view,name='my_view'),
     
     
     ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

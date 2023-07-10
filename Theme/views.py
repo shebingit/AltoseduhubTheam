@@ -193,11 +193,21 @@ def categeori_edit_save(request):
 
 
 
-
 def categorie_list(request):
     categories=Categorie.objects.all()
     page_name='Categorie'
     return render(request,'admin/categorie_list.html',{'page_name':page_name,'categories':categories})
+
+
+def template_load(request):
+    categories=Categorie.objects.all()
+    page_name='Template'
+    return render(request,'admin/template_load.html',{'page_name':page_name,'categories':categories})
+
+def template_editload(request):
+    categories=Categorie.objects.all()
+    page_name='Template'
+    return render(request,'admin/template_editlist.html',{'page_name':page_name,'categories':categories})
 
 
 def my_view(request):
