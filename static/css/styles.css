@@ -1157,113 +1157,82 @@ color: #fbfbfb;
 /* ===============CLIENT SECTION =============*/
 .client__section
 {
-  background-color: #f9f6f6;
-  padding: 6rem 1rem;
+  background: rgb(1,2,2);
+  background: linear-gradient(335deg, rgba(1,2,2,1) 5%, rgba(1,7,6,1) 87%);
+padding: 5rem 0.90rem;
 }
+.client__top
+{
+  margin-bottom: 2rem;
+  padding: 3rem 0rem;
+}
+
 .client__top h3
 {
   text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.5rem;
   letter-spacing: 0.08rem;
   margin-bottom: 1.2rem;
-  color: #222121;
+  color: #eceaea;
+  font-weight: 600;
+  
 }
+
 .client__top p{
   font-size: 1rem;
   margin-bottom: 0.40rem;
   text-align: center;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   letter-spacing: 0.06rem;
+  color: #d1cece;
 }
-.client__logoBox
+.testimonialBox
 {
-  margin-top: 1.5rem;
-  background-color: #fefefe;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 1rem;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.client__logo
-{
-  height: 120px;
-  width:120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 15%;
-  aspect-ratio: 3/3;
-}
-.client__logo img{
-  width: 100%;
-  aspect-ratio: 4/3;
- object-fit: contain;
-}
-.client__testmonial
-{
-  margin-top: 2rem;
+ 
   grid-template-columns: repeat(2,1fr);
-  gap: 3rem
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+
+
 }
-.tesimonial__box
+.testimonial__card
 {
-  padding: 1.4rem 0.90rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  border-radius: 43px;
-background: linear-gradient(225deg, #dadada, #ffffff);
-box-shadow:  -27px 27px 53px #cecece,
-             27px -27px 53px #ffffff;
+  justify-content: space-evenly;
+ 
+  gap: 1rem;
+  padding: 2.5rem 2rem;
+  background: rgb(0,2,3);
+  background: linear-gradient(180deg, rgba(0,2,3,1) 0%, rgba(4,24,22,1) 87%);
   
 }
-.testimonial__imgBox
+.testimonial_imgBox
 {
-  height: 120px;
-  width: 280px;
-  background-color: #e7e6e8;
+  width: 90px;
+  height: 50px;
+  background: #ffff;
   border-radius: 50%;
 }
-.testimonial__imgBox img{
+.testimonial_imgBox img{
   width: 100%;
   height: 100%;
-  position: 50% 50%;
+  object-fit: fill;
   border-radius: 50%;
 }
-.testmonial__content p{
-  font-size: 0.83rem;
-  line-height: 1.6rem;
-  margin-bottom: 1rem;
-  color: #2b2a2a;
+.testmonial__contentBox p{
+  color: #aeacac;
+  line-height: 1.8rem;
+  font-size: 0.90rem;
 }
-.testmonial__content h5{
-  margin-bottom: 0.50rem;
-  color: #2b2a2a;
-  font-weight: 500;
-}
-.testmonial__content i{
-  color: #fdc129;
-}
+
+
+
 @media (max-width:932px)
 {
-  .client__logoBox
-  {
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 2rem 1.50rem;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  .client__logo
-  {
-    height: 80px;
-  
-  }
+
   .client__testmonial
   {
     grid-template-columns: repeat(2,1fr);
@@ -1272,15 +1241,34 @@ box-shadow:  -27px 27px 53px #cecece,
 }
 @media (max-width:575px)
 {
+.client__container
+{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding-top: 4rem;
+}
   .client__section
   {
     padding: 1rem 0.90rem;
   }
   .client__top h3
   {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
-
+  .testimonial_imgBox
+  {
+    width: 50px;
+    height: 50px;
+    background: #ffff;
+    border-radius: 50%;
+  }
+  .testmonial__contentBox p{
+    color: #bababa;
+    line-height: 1.6rem;
+    text-align: center;
+  }
   .client__logoBox
   {
     flex-wrap: wrap;
@@ -1304,22 +1292,31 @@ box-shadow:  -27px 27px 53px #cecece,
   {
     flex-direction: column;
   }
-  .testimonial__imgBox
-  {
-    width: 100px;
-    height: 100px;
-  }
+
+  .testimonialBox
+{
+grid-template-columns: repeat(1,1fr);
+  padding: 1rem 0rem;
+  height: auto;
+
+}
+.testimonial__card
+{
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  
+  
+}
 }
 
 /*=============== PRODUCT SECTION ===============*/
 .product__section
 {
-  /* background-image: linear-gradient(0deg, rgba(20, 22, 23, 0.511), rgba(12, 20, 27, 0.385)), url('../img/bg_top2.jpg'); 
-  background-size:100%;
-  background-position:center;
-  background-attachment: fixed;
-  object-fit: cover; */
+ 
   padding: 5rem 0rem;
+
 }
 .product__container
 {
@@ -1350,7 +1347,7 @@ box-shadow:  -27px 27px 53px #cecece,
 .product__content
 {
   display: grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(1,1fr);
   align-items: center;
   gap: 1.2rem;
 }
@@ -1483,7 +1480,7 @@ box-shadow:  -27px 27px 53px #cecece,
 }
 
 .categeory_headBox h2{
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   color: #f0ebeb;
   text-align: center;
   font-weight: 600;
@@ -1635,7 +1632,7 @@ box-shadow:  -27px 27px 53px #cecece,
         text-transform: uppercase;
         line-height:1.6rem;
         padding-bottom: 0.80rem;
-        font-size:1.7rem;
+        font-size:2.5rem;
         color: #fefcfc;
         letter-spacing:0.06rem;
         margin-bottom: 1rem;
@@ -1819,10 +1816,10 @@ box-shadow:  -27px 27px 53px #cecece,
   font-size: 0.95rem;
   line-height: 2.1rem;
   font-weight: 400;
-  border-left:4px solid #fffb11 ;
-  border-right:4px solid #fffb11 ;
-  margin:5rem 0rem;
-  margin-bottom: 6rem;
+  border-left:2px solid #fffb11 ;
+  text-align: center;
+  margin: 3rem 0rem;
+  margin-bottom: 4rem;
   color: #eeeff0;
   letter-spacing: 0.08rem;
   padding-left: 0.50rem;
@@ -1935,7 +1932,9 @@ letter-spacing: 0.06rem;
     line-height: 1.9rem;
     width: 100%;
     text-align: start;
-    margin: auto;
+    border: none;
+    margin: 0rem;
+
   }
   .outerBox
   {
@@ -2539,26 +2538,28 @@ letter-spacing: 0.06rem;
   padding: 4rem 0rem;
   gap:1.5rem
 }
-.service_item
+.service_top
 {
   gap:1.5rem;
   background-color: rgba(10, 10, 10, 0.282);
   padding: 1.5rem 0.50rem;
+  justify-content: space-evenly;
 }
 .service_imgBox
 {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+
 }
 .service_imgBox img{
   max-width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 .service__content
 {
-  padding: 0.10rem 0rem;
+  padding: 0rem 1rem;
 }
-.service__content h5{
+.service_head h5{
   color: #ecedee;
   margin-bottom: 0.50rem;
   font-size: 1.1rem;
@@ -2566,7 +2567,7 @@ letter-spacing: 0.06rem;
   line-height: 2rem;
   text-align: center;
 }
-.service__content span{
+.service_head span{
   color: #ffcb22;
   font-size: 1.3rem;
   padding-right: 0.40rem;
@@ -2618,6 +2619,13 @@ letter-spacing: 0.06rem;
     height: 100%;
     background-size: cover;
   }
+  .service_top
+  {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.75rem
+  }
   .about__rightBox_content
   {
     width: 100%;
@@ -2650,6 +2658,13 @@ letter-spacing: 0.06rem;
 .serviceBox
 {
   grid-template-columns:repeat(1,1fr);
+  padding: 1.5rem 0rem;
+  margin-bottom: 1rem;
+
+}
+.service__content p{
+  font-size: 0.92rem;
+  margin-top: -1.5rem;
 
 }
 }
@@ -3510,4 +3525,30 @@ letter-spacing: 0.06rem;
   .gallery-thumbs {
     width: 280px;
   }
+}
+
+/* Client logo scrolling */
+
+.slide img {
+  width: 100px;
+  height: 100px;
+  animation: scroll 60s linear infinite;
+}
+
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+
+.slider {
+  margin-top: 20px;
+  background-color:transparent;
+  padding: 3em 2em;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
 }

@@ -18,6 +18,10 @@ urlpatterns = [
 
     # ================ Admin section ===========
 
+    path('login',views.adminlogin,name='adminlogin'),
+    path('logout',views.logout,name='logout'),
+
+    path('LgoinCheck',views.loginCheck,name='loginCheck'),
     path('Dashboard',views.Dashboard,name='Dashboard'),
     path('Categorie_Form',views.categorie_load,name='categorie_load'),
     path('Categorie_Save',views.categorie_save,name='categorie_save'),
@@ -33,7 +37,11 @@ urlpatterns = [
     path('Template_Edit_List',views.template_editload,name='template_editload'),
     path('Template_save',views.template_save,name='template_save'),
 
-    path('my_view',views.my_view,name='my_view'),
+    path('Account-Settings',views.profile,name='profile'),
+    path('Account-Profile-Edit',views.useredit_save,name='useredit_save'),
+    path('Account-Profile-Password-Edit',views.user_password_edit,name='user_password_edit'),
+    path('Account-Profile-Password',views.userpassword_save,name='userpassword_save'),
+  
     
     
     ]

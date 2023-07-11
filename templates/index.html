@@ -388,44 +388,9 @@ right: -45px;
   </section>
 
 
-    <!--=====================CLIENTS SECTION ==========================-->
+    
             
-            <section class="client__section section" >
-                <div class="client__container container grid">
-                    <div class="client__top ">
-                        <h3>Companies That Use Our Products</h3>
-                        <!-- <p> Lorem Ipsum is simply dummy text 
-                            of the printing and typesetting industry. Lorem Ipsum has been 
-                            the industry's standard dummy text ever since the 1500s, when 
-                            an unknown printer took a galley of type and scrambled it to
-                        </p> -->
-                    </div>
-                    <div class="client__logoBox flex">
-                        <div class="client__logo">
-                            <img src="{% static 'img/l1.jpg' %}" alt="Client logo">
-                        </div>
-                        <div class="client__logo">
-                            <img src="{% static 'img/l2.jpg' %}" alt="Client logo">
-                        </div>
-                        <div class="client__logo">
-                            <img src="{% static 'img/l3.jpg' %}" alt="Client logo">
-                        </div>
-                        <div class="client__logo">
-                            <img src="{% static 'img/l4.jpg' %}" alt="Client logo">
-                        </div>
-                        <div class="client__logo">
-                            <img src="{% static 'img/l5.jpg' %}" alt="Client logo">
-                        </div>
-                        <div class="client__logo">
-                            <img src="{% static 'img/l6.jpg' %}" alt="Client logo">
-                        </div>
-                        
-                    </div>
-                </div>
-             </section>
-
-            
-    <!--==================== PRICING BOTTOM SECTION ====================-->
+    <!--====================  BOTTOM SECTION ====================-->
 
             <section class="pricingTemplate_section section" >
                 <div class="pricingTemplate__container container">
@@ -454,76 +419,99 @@ right: -45px;
     <!--=====================TESTIMONIAL SECTION ==========================-->
 
               <section class="client__section section" >
-                <div class="client__container container grid">
+                <div class="client__container container">
                     <div class="client__top ">
                         <h3>Hear What Our Customers Have to Say</h3>
                         <p> 
                             Discover the glowing testimonials from our delighted customers who have experienced exceptional
                             results with our products and services.
-
                         </p>
                     </div>
-                    
-                    <div class="client__testmonial grid">
-                        <div class="tesimonial__box"data-aos="fade-up"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500">
-                            <div class="testimonial__imgBox">
-                                <img src="{% static 'img/bth3.jpg' %}" alt="testimonial img">
-                            </div>
-                            <div class="testmonial__content">
-                                <p>
-                                    <i class="ri-double-quotes-l"></i>
-                                        Lorem Ipsum is simply dummy text 
-                                        of the printing and typesetting industry. Lorem Ipsum has been 
-                                        the industry's standard dummy text ever since the 1500s 
-                                    <i class="ri-double-quotes-r"></i>
-                                </p>
-                                <h5>JASS NORTON</h5>
-                                <h6>DESIGNER</h6>
-                            </div>
+              
+                 
+
+                    <div class="testimonialBox grid">
+                      
+                      <div class="testimonial__card ">
+                        <div class="testimonial_imgBox">
+                          {% if img %}
+                          <img src="#" alt="#">
+                          {% endif %}
                         </div>
-                        <div class="tesimonial__box" data-aos="fade-up"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500">
-                            <div class="testimonial__imgBox">
-                                <img src="#" alt="testimonial img">
-                            </div>
-                            <div class="testmonial__content">
-                                <p>
-                                    <i class="ri-double-quotes-l"></i>
-                                    Lorem Ipsum is simply dummy text 
-                                    of the printing and typesetting industry. Lorem Ipsum has been 
-                                    the industry's standard dummy text ever since the 1500s 
-                                <i class="ri-double-quotes-r"></i>
-                                </p>
-                                <h5>JASS NORTON</h5>
-                                <h6>DESIGNER</h6>
-                            </div>
+                        <div class="testmonial__contentBox">
+                          <p>
+                            " Lorem Ipsum is simply dummy text 
+                            of the printing and typesetting industry. Lorem Ipsum has been 
+                            the industry's "
+                          </p>
                         </div>
-                        <div class="tesimonial__box" data-aos="fade-up"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500">
-                            <div class="testimonial__imgBox">
-                                <img src="#" alt="testimonial img">
-                            </div>
-                            <div class="testmonial__content">
-                                <p>
-                                    <i class="ri-double-quotes-l"></i>
-                                        Lorem Ipsum is simply dummy text 
-                                        of the printing and typesetting industry. Lorem Ipsum has been 
-                                        the industry's standard dummy text ever since the 1500s 
-                                    <i class="ri-double-quotes-r"></i>
-                           
-                                </p>
-                                <h5>JASS NORTON</h5>
-                                <h6>DESIGNER</h6>
-                            </div>
-                        </div>
+                      </div>
+                      
                     </div>
+                    <div class="slider">
+                      <div class="slide-track">
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png" alt="">
+                        </div>
+                        <div class="slide">
+                          <img src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <style>
+                     
+                    </style>
+                   
+                   
                 </div>
               </section>
 
@@ -974,4 +962,6 @@ right: -45px;
    
               
 {% endblock %}
-        
+        <!--=====================CLIENTS SECTION ==========================-->
+            
+      

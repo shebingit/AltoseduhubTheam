@@ -1,6 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import User,auth
 
+#Admin_data
 
+class Admin_data(models.Model):
+    u_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True,default='')
+    u_image = models.ImageField(null=True,blank = True,upload_to = 'categorie')
+    u_name = models.CharField(max_length=255, null=True,blank=True,default='')
+    u_desig = models.CharField(max_length=255,null=True,blank=True,default=0)
+    u_password = models.CharField(max_length=255,null=True,blank=True,default=0)
+   
 
 #  Categorie Table 
 class Categorie(models.Model):
